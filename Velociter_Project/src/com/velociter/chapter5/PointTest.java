@@ -4,8 +4,8 @@ public class PointTest {
 
 	public static void main(String[] args) {
 		
-		Point start=new Point(4,8);	
-		Point end = new Point(5,10);
+		PointExample start=new PointExample(4,8);	
+		PointExample end = new PointExample(5,10);
 		System.out.println("Points created are :"+start+" and "+end);
 		
 		Line line1=new Line(start,end);

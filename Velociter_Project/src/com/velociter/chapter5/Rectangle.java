@@ -1,3 +1,5 @@
+
+
 package com.velociter.chapter5;
 
 public class Rectangle {
@@ -5,30 +7,27 @@ public class Rectangle {
 	public Point topLeft;
 	public Point bottomRight;
 	
-	public Rectangle(final Point topLeft,final Point bottomRight) {
-		this.topLeft=new Point(topLeft);
-		this.bottomRight=new Point(bottomRight);
-		
-	}
-	public Rectangle(double xtopLeft,double ytopLeft,double xbottomRight,double ybottomRight) {
-		topLeft=new Point(xtopLeft,ytopLeft);
-		bottomRight=new Point(xbottomRight,ybottomRight);
-
+	public Rectangle(double x1,double y1,double x2,double y2){
+		 topLeft = new Point(Math.min(x1,x2),Math.min(y1,y2));
+		  bottomRight = new Point(Math.max(x1,x2),Math.max(y1,y2));
 }
-	public double length() {
-		return topLeft.distance(bottomRight);
-		
+
+	public Rectangle (Point tl,Point br) {
+		this(tl.getX(), tl.getY(), br.getX(), br.getY());
+	  }
+	public Rectangle(Rectangle rect) {
+		 topLeft = new Point(rect.topLeft);
+		 bottomRight = new Point(rect.bottomRight);
 	}
+		
 	public String toString() {
 		return "("+topLeft+"):("+bottomRight+")";
 		
 	}
-	Point enclose(final Rectangle rect) {
-		Point localPoint = new Point(0, 0);
-		double num = (this.bottomRight.y - this.topLeft.y)*(this.topLeft.x-rect.topLeft.x) -(this.bottomRight.x-this.topLeft.x)*(this.topLeft.y-rect.topLeft.y);
-		double denom = (this.bottomRight.y - this.topLeft.y)*(rect.bottomRight.x - rect.topLeft.x)-(this.bottomRight.x - this.topLeft.x)*(rect.bottomRight.y - rect.topLeft.y);
-		localPoint.x = rect.topLeft.x + (rect.bottomRight.x - rect.topLeft.x)*num/denom;
-		localPoint.y = rect.topLeft.y + (rect.bottomRight.y - rect.topLeft.y)*num/denom;
-		return localPoint;
-		}
+	public Rectangle enclose(Rectangle rect) {
+		return new Rectangle(Math.min(topLeft.getX(), rect.topLeft.getX()),
+                Math.min(topLeft.getY(), rect.topLeft.getY()),
+                Math.max(bottomRight.getX(), rect.bottomRight.getX()),
+                Math.max(bottomRight.getY(), rect.bottomRight.getY()));
+}
 }
