@@ -3,6 +3,8 @@ package com.velociter.chapter5;
 import java.awt.Point;
 
 public class Rectangle {
+	  private double x;
+	  private double y;
 	
 	  public void Point(double x, double y) {
 	    this.x = x;
@@ -29,8 +31,5 @@ public class Rectangle {
 	    return x +","+y;
 	  }
 	 
-	  
-	  private double x;
-	  private double y;
  }
  
