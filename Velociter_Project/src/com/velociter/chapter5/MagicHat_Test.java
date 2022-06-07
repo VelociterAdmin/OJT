@@ -6,9 +6,8 @@ public class MagicHat_Test {
 		
 	    MagicHat hat = new MagicHat("hat"); 
 	   
-
 		MagicHat.Rabbit rabbit =new MagicHat.Rabbit(); 
-		System.out.println(hat); 		
+			
 		System.out.println("\nNew rabbit is :"+ rabbit);
 }
 }

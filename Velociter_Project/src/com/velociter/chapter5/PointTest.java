@@ -18,9 +18,7 @@ public class PointTest {
 			
 		}
         
-		Rectangle rec=new Rectangle(topLeft, bottomRight);
-        Rectangle rec=new Rectangle(0,0,0,0);
-        System.out.println("Rectangle enclose:"+topLeft+" and "+bottomRight);
+		
         
 
 	}
