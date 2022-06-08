@@ -1,2 +1,3 @@
-/TryGeometry/
-/com/
+*.jar
+*.class
+.gitignore
