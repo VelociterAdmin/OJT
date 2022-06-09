@@ -1,0 +1,22 @@
+package com.velociter.chapter6;
+
+public class Point {
+	protected double x;
+	protected double y;
+	
+	public void findPoint() {}
+	
+	
+	// Create a line from two points
+Line(final Point start, final Point end) {
+this.start = new Point(start);
+this.end = new Point(end);
+}
+
+// Create a line from two points - a poor implementation!
+Line(final Point start, final Point end) {
+this.start = start; // Dependent on external object!!!
+this.end = end; // Dependent on external object!!!
+}
+
+}
