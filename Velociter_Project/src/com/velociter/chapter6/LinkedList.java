@@ -34,9 +34,12 @@ public class LinkedList {
 	  }
  
 	  }
+ 
+	
+}
 	 
 		  
-	  }
+	  
  
 	  
   

@@ -4,10 +4,12 @@ public abstract class ShapeAndPolyline {
 	protected double x;
 	protected double y;
 	
-	public void move() {
+	public void move(double xPosition,double yPosition) {
+		x +=xPosition;
+		y +=yPosition;
 		
 	}
-	 public abstract void show();
+	public abstract void show();
 		
 	
 }
