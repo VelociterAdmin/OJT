@@ -19,6 +19,7 @@ public class NewLinkedList {
 			list.remove(5);
 			System.out.println("List After Removing Elements");
 			System.out.println(list);
+			
 	}
 }
 

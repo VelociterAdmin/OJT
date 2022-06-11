@@ -1,12 +1,13 @@
 package com.velociter.chapter6;
 
-public class ShapeList {
-
-	public static void main(String[] args) {
-		SubClass obj=new SubClass();
-		System.out.println(obj.Add(6, 7));
-		System.out.println(obj.Sub(10, 5));
-
-	}
-
+public class ShapeList  {
+public static void main (String[] args)
+{
+Circle c=new Circle();
+ c.areaOfCirclee();
+Square s=new Square();
+s.areaOfSquaree();
+NewRectangle r=new NewRectangle();
+r.areaOfReactangle();
+ }
 }
