@@ -1,6 +1,6 @@
-package com.velociter.chapter6;
+package com.velociter.chapter6example;
 
-public abstract class ShapeAndPolyline {
+public abstract class Shape {
 	protected double x;
 	protected double y;
 	
@@ -11,5 +11,5 @@ public abstract class ShapeAndPolyline {
 	}
 	public abstract void show();
 		
-	
+
 }
