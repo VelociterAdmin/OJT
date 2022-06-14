@@ -23,11 +23,11 @@ public class Point {
 		return x+" "+y;
 	}
 	public double distance(Point end) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 	public double Y() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 

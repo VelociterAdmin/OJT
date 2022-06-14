@@ -1,11 +1,22 @@
 package com.velociter.chapter5example;
 
 public class Student {
-    private static String name="Shweta";
-    private int id=17 ;
+     static String name="Shweta";
+     int id=17 ;
 	
-    
-    public  void show1() {
+	public static String getName() {
+		return name;
+	}
+	public static void setName(String name) {
+		Student.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public  void show1() {
 		System.out.println("Name");
 	}
 	public  void show2() {

@@ -1,6 +1,5 @@
 package com.velociter.chapter5example;
 
-import com.velociter.chapter5example.Student.Student2;
 
 public  class Employee  {
 	public  String empName="Danish";
@@ -27,18 +26,10 @@ public  class Employee  {
 	}
 
 	public static void main(String[] args) {
-		//Employee emp1=new Employee();
+		Employee emp1=new Employee();
 		Employee2 emp2=new Employee2();
-		//System.out.println(emp1.empName);
-		//System.out.println(emp1.empId);
-		System.out.println(emp2.empAddress);
-		System.out.println(emp2.empBranch);
 		Student std1=new Student();
-		Student.Student2 std2=std1.new Student2();
-		//System.out.println(std1.name);
-		//System.out.println(std1.id);
-		
-		System.out.println(std2.gender);
-		System.out.println(std2.age);
+		System.out.println(std1.getName());
+		System.out.println(std1.getId());
 	}
 	}
