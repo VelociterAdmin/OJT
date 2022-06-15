@@ -3,16 +3,16 @@ package com.velociter.chapter7;
 public class TryBlock {
 	
  public static void main (String[]args){
-	 int arr[]=new int[5];
+	
 	 try {
-
-		 for(int j=0;j<6;j++) {
-			 System.out.println(arr[j]);
-		 }
+		 int arr[]=new int[-5];
+		 System.out.println(arr[-5]);
+		 
 	 }
-	 catch(ArrayIndexOutOfBoundsException e) {
-		 System.out.println("ArrayIndexOutOfBoundsException");
+		
+	 catch(NegativeArraySizeException e) {
+		 System.out.println("NegativeArraySizeException");
 	 }
- }
-
+	 
+}
 }
