@@ -35,7 +35,7 @@ public int volumeDown(int decrement) {
 	return 0;
 }
 @Override
-public  mute() {
+public void mute() {
 	if(!power) {
 		return;
 	}
@@ -56,13 +56,27 @@ public int setChannel(int newChannel) {
 	
 @Override
 public int channelUp() {
-	// TODO Auto-generated method stub
-	return 0;
-}
-@Override
-public int channelDown() {
-	// TODO Auto-generated method stub
-	return 0;
-}
+if(!power) {
+		
+		return 0;
+	}
+channel=channel<MAX_CHANNEL?++channel:MIN_CHANNEL;
 
+System.out.println(make + " VCR tuned to channel: "+ channel);
+return channel;
+	}
+
+	@Override
+	public int channelDown() {
+		if(!power) {
+		return 0;
+	}
+		channel = channel>MIN_CHANNEL ? --channel : MAX_CHANNEL;
+		System.out.println(make + " VCR tuned to channel: "+ channel);
+		return channel;
+		}
 }
+	
+
+
+	

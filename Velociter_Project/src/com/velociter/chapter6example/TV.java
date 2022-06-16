@@ -4,7 +4,7 @@ import static java.lang.Math.min;
 
 public class TV implements RemoteControl{
 	private String make = null;
-	private int screenSize = 0;
+	private int screenSize=0;
 	private boolean power = false;
 	private int MIN_VOLUME = 0;
 	private int MAX_VOLUME = 100;
@@ -35,6 +35,8 @@ public class TV implements RemoteControl{
 		System.out.println(make + " "+ screenSize +" inch TV volume level: "+ volume);		
 		return volume;
 	}
+	
+	
 
 
 	@Override
