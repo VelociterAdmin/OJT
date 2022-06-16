@@ -25,6 +25,7 @@ package com.velociter.chapter6example;
 		}
 		
 		public int volumeUp(int increment) {
+			
 			if(!power) { 
 				return 0; 
 				}
@@ -87,5 +88,7 @@ package com.velociter.chapter6example;
 				System.out.println(make +" "+ screensize + " inch TV tuned to channel: "
 				+ channel);
 				return channel;
+				
 		}
+	
 }

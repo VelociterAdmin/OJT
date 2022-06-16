@@ -1,10 +1,10 @@
-package com.velociters.chapter5example;
+package com.velociter.chapter6example;
 
 public class PowerClac {
 
 	public static void main(String[] args) {
 		double x=5.0;
-		System.out.println(x + "to the power 4 is " + power(x,4));
+		System.out.println(x + " to the power 4 is " + power(x,4));
        
 	}
     static double power(double x,int n)

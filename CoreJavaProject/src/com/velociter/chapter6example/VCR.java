@@ -15,7 +15,7 @@ package com.velociter.chapter6example;
 			}
 		public boolean powerOnOff() {
 			power=!power;
-			System.out.println(make+" "+VRC power+"inchTV power"+(power?"on.":"off."));
+			System.out.println(make+"VRC power"+(power?"on.":"off."));
 			return power;
 		}
 		
@@ -26,7 +26,7 @@ package com.velociter.chapter6example;
 				
 				volume += increment;
 				volume = min(volume, MAX_VOLUME);
-				System.out.println(make +" "+ VCR volume level + " inch TV volume level: "
+				System.out.println(make + "VCR volume level "+ 
 				+ volume);
 				return volume;
 		}
@@ -37,7 +37,7 @@ package com.velociter.chapter6example;
 				}
 				volume -= decrement;
 				volume = max(volume, MIN_VOLUME);
-				System.out.println(make +" "+  + "VCR volume level: "+ volume);
+				System.out.println(make + "VCR volume level: "+ volume);
 				return volume;
 		}
 		public void mute() {
@@ -45,8 +45,7 @@ package com.velociter.chapter6example;
 				return; 
 				}
 				volume = MIN_VOLUME;
-				System.out.println(make +" "+  + " inch TV volume level: "
-				+ volume);
+				System.out.println(make +"VCR volume level:"+ volume);
 		}
 		
 		public int setChannel(int newChannel) {
@@ -56,8 +55,7 @@ package com.velociter.chapter6example;
 				
 				if(newChannel>=MIN_CHANNEL && newChannel<=MAX_CHANNEL)
 				channel = newChannel;
-				System.out.println(make +" "+ screensize + " inch TV tuned to channel: "
-				+ channel);
+				System.out.println(make +"VCR tuned to channel"+ channel);
 				return channel;
 		}
 		
@@ -66,7 +64,7 @@ package com.velociter.chapter6example;
 				return 0; 
 				}
 				channel = channel<MAX_CHANNEL ? ++channel : MIN_CHANNEL;
-				System.out.println(make +" "+ + " inch TV tuned to channel: "+ channel);
+				System.out.println(make +"VCR tuned to channel"+ channel);
 				return channel;
 		}
 		
@@ -76,7 +74,7 @@ package com.velociter.chapter6example;
 				}
 				
 				channel = channel>MIN_CHANNEL ? --channel : MAX_CHANNEL;
-				System.out.println(make +" "+  + " inch TV tuned to channel: "+ channel);
+				System.out.println(make +"VCR tuned to channel"+ channel);
 				return channel;
 		}
   
