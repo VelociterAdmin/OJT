@@ -1,6 +1,6 @@
 package com.velociter.chapter6example;
 //import static com.velociter.chapter6example.ConversionFactors.*;
-public class TryConversions extends ConversionFactors {
+public class TryConversions implements ConversionFactors {
 public static double poundsToGrams(double pounds) {
 return pounds*POUND_TO_GRAM;
 }
