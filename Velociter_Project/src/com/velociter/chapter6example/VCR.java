@@ -37,7 +37,7 @@ public int volumeDown(int decrement) {
 @Override
 public void mute() {
 	if(!power) {
-		return;
+		return ;
 	}
 	volume=MIN_VOLUME;
 	System.out.println(make + "VCR volume level:"+ volume);

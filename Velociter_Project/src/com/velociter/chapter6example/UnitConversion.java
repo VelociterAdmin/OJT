@@ -8,4 +8,5 @@ public interface UnitConversion {
 	public static final double WATT_TO_HP=1.0/HP_TO_WATT;
 
 	
+	
 }

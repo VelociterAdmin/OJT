@@ -48,7 +48,7 @@ public class TV implements RemoteControl{
 	}
 		volume -= decrement;
 		volume = max(volume, MIN_VOLUME);
-		System.out.println(make + " "+ screenSize + " inch TV power " + volume));
+		System.out.println(make + " "+ screenSize + " inch TV power " + volume);
 		return volume;
 	}
 
