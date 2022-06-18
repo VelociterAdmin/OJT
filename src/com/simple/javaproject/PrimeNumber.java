@@ -8,7 +8,7 @@ public class PrimeNumber {
 		boolean isPrime=true;
 		for(int i=2;i<=nValue;i++) {
 			isPrime=true;
-			for(int j=2;j<i;j++) {
+			for(int j=2;j<Math.sqrt(i);j++) {
 				if(i%j==0) {
 					isPrime=false;
 					break;
