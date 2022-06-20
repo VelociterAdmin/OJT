@@ -1,7 +1,7 @@
 package com.velociters.chapter5example;
 
 public class Sphere1 {
-	 Sphere1(double x, double y, double z) {
+/*	 Sphere1(double x, double y, double z) {
 		xCenter = x;
 		yCenter = y;
 		zCenter = z;
@@ -15,5 +15,5 @@ public class Sphere1 {
 		zCenter = 0.0;
 		radius = 1.0;
 		++count; 
-		}
+		}*/
 }
