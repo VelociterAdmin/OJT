@@ -7,7 +7,7 @@ public class DisplayRandomChoiceOfSet {
 	enum breakfast {Scrambled_Eggs ,Waffles, Fruits ,Cereal ,Toast ,Yogurt}
 	public static void main(String[] args) {
 		int randomChoice = (int)(6*Math.random());
-//		randomChoice = 4;
+//		1:Scrambled_Eggs 2:Waffles 3:Fruits 4:Cereal 5:Toast 6:Yogurt
 		switch(randomChoice){
 		case 0:
 			System.out.println("Scrambled Eggs");

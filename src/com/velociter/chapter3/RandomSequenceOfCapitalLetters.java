@@ -1,22 +1,22 @@
 package com.velociter.chapter3;
-
+/*
+ * Write a program to generate a random sequence of capital letters that does not include vowels.
+ */
 public class RandomSequenceOfCapitalLetters {
 
 	public static void main(String[] args) {
-		char charactor = 'A';
-		for(int i=1;i<=26;i++) {
-			charactor = (char) (charactor + (26*Math.random()));
-			switch(charactor) {
+		for(int i=65;i<=(int)(26*Math.random()+65);i++) {
+			switch((char)(i)) {
 			case 'A':
 			case 'E':
 			case 'I':
 			case 'O':
 			case 'U':
-				break;
+				continue;
 			default:
-				System.out.println(charactor);
+				System.out.print((char)(i));
+				break;
 			}
 		}
 	}
-
 }
