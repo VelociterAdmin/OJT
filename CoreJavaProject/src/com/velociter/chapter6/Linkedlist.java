@@ -21,7 +21,6 @@ public class Linkedlist{
 		Node n5=new Node();
 		n5.number=5;
 		n4.next=n5;
-		
 		Node head=n1;
 		traverse(head);
 		
@@ -34,13 +33,6 @@ public class Linkedlist{
 			System.out.print(temp.number+" ");
 		    temp=temp.next;
 		}
-		/*
-		System.out.println("Backword Traversing");
-		while(temp!=head)
-		{
-			System.out.println(temp.number);
-			temp=temp.next;
-		}*/
 	}
 }
 
