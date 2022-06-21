@@ -1,5 +1,7 @@
 package com.velociter.chapter3;
-
+/*A lottery requires that you select six different numbers from the integers 1 to 49.
+ * Write a program to do this for you and generate five sets of entries.
+*/
 public class LotteryGenerater {
 
 	public static void main(String[] args) {
@@ -9,14 +11,16 @@ public class LotteryGenerater {
 			diffNum[a]=a;
 //			System.out.println(a);
 		}
-		for(int j=1;j<=5;j++) {
-			System.out.println("Entry :"+j);
-			for(int i=1;i<=6;i++) {
+		for(int i=1;i<=5;i++) {
+			System.out.println("Entry :"+i);
+			for(int j=1;j<=6;j++) {
 				System.out.print(diffNum[((int)(Math.random()*49))]+",");
 				
 			}
 			System.out.println();
 		}
+		int luckyNumber;
+		//for()
 	}
 
 }

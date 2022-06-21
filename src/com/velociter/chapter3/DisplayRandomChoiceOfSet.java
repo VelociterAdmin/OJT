@@ -8,6 +8,7 @@ public class DisplayRandomChoiceOfSet {
 	public static void main(String[] args) {
 		int randomChoice = (int)(6*Math.random());
 //		1:Scrambled_Eggs 2:Waffles 3:Fruits 4:Cereal 5:Toast 6:Yogurt
+		System.out.print("Todays Breakfast is ");
 		switch(randomChoice){
 		case 0:
 			System.out.println("Scrambled Eggs");
