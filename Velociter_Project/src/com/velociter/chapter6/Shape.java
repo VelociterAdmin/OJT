@@ -1,4 +1,5 @@
-package com.velociter.chapter6;
+
+ package com.velociter.chapter6;
 
 public interface Shape {
 	
