@@ -1,10 +1,8 @@
-package com.velociter.chapter8examples;
+/*package com.velociter.chapter8examples;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StreamTokenizer;
 import java.io.Reader;
-
-
 public class StreamTokenizer1  {
 	public static void main(String[] args) throws IOException
 	{
@@ -24,6 +22,12 @@ public class StreamTokenizer1  {
 
 	}
 
+	private static int nextToken() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
 
 
+*/
