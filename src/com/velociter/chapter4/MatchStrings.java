@@ -1,4 +1,4 @@
-package com.velociter.chapter3;
+package com.velociter.chapter4;
 public class MatchStrings {
 	public static void main(String[] args) {
 		String string1 = "Too many ";

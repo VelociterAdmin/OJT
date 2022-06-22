@@ -1,4 +1,4 @@
-package com.velociter.chapter3;
+package com.velociter.chapter4;
 
 public class MultiplicationArray {
 /*

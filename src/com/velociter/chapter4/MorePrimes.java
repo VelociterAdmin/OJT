@@ -1,4 +1,4 @@
-package com.velociter.chapter3;
+package com.velociter.chapter4;
 import static java.lang.Math.*;
 public class MorePrimes {
 	public static void main(String[] args) {

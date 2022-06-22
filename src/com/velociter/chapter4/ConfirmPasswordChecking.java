@@ -1,19 +1,20 @@
-package com.velociter.chapter3;
+package com.velociter.chapter4;
 
 import java.util.Scanner;
 
 public class ConfirmPasswordChecking {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		String password =null,confirmPassword = null;
-		String obj = new String();
+//		String obj = new String();
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter Password :");
-//		password = scan.next();
-		password = "Sh";
+		password = scan.next();
+//		password = "Sh";
 		System.out.println("Enter Password Again:");
-//		confirmPassword = scan.next();
-		confirmPassword = "Sh";
+		confirmPassword = scan.next();
+//		confirmPassword = "Sh";
 		confirmPassword = confirmPassword.intern();
 		System.out.println(password +" : "+confirmPassword);
 		password = confirmPassword;
