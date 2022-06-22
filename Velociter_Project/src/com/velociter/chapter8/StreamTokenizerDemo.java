@@ -15,17 +15,18 @@ public class StreamTokenizerDemo {
 		StreamTokenizer StreamTokenizer=null;
 		StringReader sr=new StringReader("this is tokenizer:");
 		 StreamTokenizer = new StreamTokenizer(StringReader);
-		
-		while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {
+		}
+}
+	while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {
 			if(StreamTokenizer.ttype==StreamTokenizer.TT_WORD) {
 				System.out.println("Inside TT_Word:"+StreamTokenizer.sval);
 			}
 			else if(StreamTokenizer.ttype==java.io.StreamTokenizer.TT_NUMBER){
 				System.out.println("Inside TT_Number:"+StreamTokenizer.nval);
 			}
+		
 		}
 	}
 }
-
 	
 

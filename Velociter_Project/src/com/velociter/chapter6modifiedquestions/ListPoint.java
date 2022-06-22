@@ -1,9 +1,8 @@
 package com.velociter.chapter6modifiedquestions;
 
-import com.velociter.chapter5.Point;
 
 public class ListPoint {
-	private ListPoint next; 
+	private Point next; 
 	private Point point; 
 	
 		
@@ -12,11 +11,11 @@ public class ListPoint {
 		next = null; 
 		}
 		
-		public void setNext(ListPoint next) {
-		this.next = next; 
+		public void setNext(Point newEnd) {
+		this.next = newEnd; 
 		}
 		
-		public ListPoint getNext() {
+		public Point getNext() {
 		return next; 
 		}
 		
