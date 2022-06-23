@@ -9,19 +9,41 @@ public class MultiplicationArray {
  * row heading, which ranges from 1 to 12.)
  */
 	public static void main(String[] args) {
-		int[][] twoDArray = new int[10][12];
-//twoDArray[][] = {{1,2,3,4,5,6,7,8,9,10},{11,12,13,14,15,16,17,18,19,20},{21,22,23,24,25,26,27,28,29,30}};
-		for(int i=0; i<twoDArray.length; i++) {
+		int size=32;
+		size++;
+		int[][] twoDArray = new int[size][size];										//Array to store numbers
+		for(int i=0; i<twoDArray.length; i++) {											//Storing numbers in twoDArray
 			for(int j=0; j < twoDArray[i].length; j++) {
-				twoDArray[i][j] = (i*j)+1;
+				twoDArray[i][j] = (i*j);
 			}
 		}
-		for(int i=0; i<twoDArray.length; i++) {
-			for(int j=0; j<twoDArray[i].length;j++) {
-				System.out.print(twoDArray[i][j]+"\t");
+		System.out.print("\t");															//Heading rows 1 2 3 4 5 6.....
+		for(int i=1; i<2; i++) {
+			for(int j=1; j<twoDArray[i].length; j++) {
+				System.out.print("\t"+j);
 			}
-//			System.out.print("\");
+			
+			
+		}
+		System.out.println();
+		System.out.print("\t");
+		for(int i=1; i<2; i++) {														//For Underline
+			for(int j=1; j<twoDArray[i].length; j++) {
+				System.out.print("\t_");
+			}
 			System.out.println();
+			
+		}
+		for(int i=1; i<twoDArray.length; i++) {										//Printing twoDArray
+			System.out.print(i+"\t|\t");
+			for(int j=1; j<twoDArray[i].length;j++) {
+//				System.out.print((i)+" * "+(j)+" = "+(twoDArray[i][j])+"\t\t");		//to print 1*1 upto 12*12
+				
+				System.out.print((twoDArray[j][i])+"\t");
+			
+			}
+
+			System.out.println("");
 		}
 	}
 
