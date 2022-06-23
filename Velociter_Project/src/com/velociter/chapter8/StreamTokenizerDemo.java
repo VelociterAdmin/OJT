@@ -8,15 +8,12 @@ import java.io.Reader;
 
 public class StreamTokenizerDemo {
 
-
-	private static final InputStream StringReader =null;
-
-	public static void main(String[] args)throws IOException {
+public static void main(String[] args)throws IOException {
 		StreamTokenizer StreamTokenizer=null;
-		StringReader sr=new StringReader("this is tokenizer:");
-		 StreamTokenizer = new StreamTokenizer(StringReader);
-		}
-}
+		StringReader stringReader=new StringReader("there is 1 tokenizer:");
+		
+		 StreamTokenizer = new StreamTokenizer(stringReader);
+
 	while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {
 			if(StreamTokenizer.ttype==StreamTokenizer.TT_WORD) {
 				System.out.println("Inside TT_Word:"+StreamTokenizer.sval);

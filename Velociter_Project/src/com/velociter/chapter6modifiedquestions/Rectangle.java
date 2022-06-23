@@ -5,7 +5,6 @@ public class Rectangle extends Shape2{
 	double width;
 	double result;
 	
-	
 	public Rectangle(double length,double width) {
 		this.length=length;
 		this.width=width;
@@ -13,18 +12,18 @@ public class Rectangle extends Shape2{
 	}
 //override the common methods from extended class shape2. 	
 	public double area() {
-	System.out.print("A rectangle whose length :"+length);
-	System.out.print(" and width :"+ width );
+	System.out.print("A rectangle whose length = "+length);
+	System.out.print(" ;  width  = "+ width );
        result=length*width;
-       System.out.println("calculate the Area of rectangle "+result);
+       System.out.println(" ;  Area of rectangle      = "+result);
 		return 0;
 	}
 
 	public double perimeter() {
-		System.out.print("A rectangle whose length :"+length);
-		System.out.print(" and width :"+ width );
+		System.out.print("A rectangle whose length = "+length);
+		System.out.print(" ;  width  = "+ width );
 	      result=(2*(length+width));
-	      System.out.println(" calculate the perimeter of rectangle "+result);
+	      System.out.println(" ;  Perimeter of rectangle = "+result);
 		 return 0;
 	}
 	

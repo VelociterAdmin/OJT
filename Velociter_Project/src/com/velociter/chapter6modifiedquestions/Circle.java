@@ -10,16 +10,16 @@ public class Circle extends Shape2 {
 
 	@Override
 	public double area() {
-	System.out.print("A Circle whose radius :"+radius);
+	System.out.print("A Circle whose radius    = "+radius);
 	result = Math.PI*radius*radius;
-    System.out.println(" calculate the Area of circle: "+result);
+    System.out.println(" ;  Area of circle      = "+result);
 	return 0;
 	}
 	@Override
 	public double perimeter() {
-	System.out.print("A Circle whose radius :"+radius);
+	System.out.print("A Circle whose radius    = "+radius);
 	result = 2*Math.PI*radius;
-	System.out.print(" calculate the perimeter of circle: "+result);
+	System.out.println(" ;  Perimeter of circle = "+result);
 	return 0;
 	}
 

@@ -23,10 +23,6 @@ public class Point {
 	public String toString() {
 		return x+" "+y;
 	}
-	public double distance(Point end) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	public void setNext(Point newEnd) {
 		// TODO Auto-generated method stub
 		
@@ -35,5 +31,9 @@ public class Point {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	public double distance(Point end) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 }
