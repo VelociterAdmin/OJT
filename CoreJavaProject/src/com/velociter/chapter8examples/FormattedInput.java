@@ -32,30 +32,30 @@ public class FormattedInput {
         System.exit(1);     // exit(1) means unsuccessful termination
        return 0;
         }
-		/*	public int readInt() throws InvalidUserInputException {
-				if (readToken() != tokenizer.TT_NUMBER) {  
-					throw new InvalidUserInputException(" readInt() failed. "+"Input data not numeric");
-					}
-					if (tokenizer.nval > (double) Integer.MAX_VALUE
-					|| tokenizer.nval < (double) Integer.MIN_VALUE) {
-					throw new InvalidUserInputException(" readInt() failed."+ "Input outside range of type int ");
-					}
-					if (tokenizer.nval != (double) (int) tokenizer.nval) {
-					throw new InvalidUserInputException(" readInt() failed."+ "Input not an integer");
-					}
-					return (int) tokenizer.nval;
-					}*/
 			public double readDouble() throws InvalidUserInputException {
-				if (readToken() != tokenizer.TT_NUMBER) {
+				if (readToken() != tokenizer.TT_NUMBER) {                 //conduction for checking whether the data entered is Number or not
 				throw new InvalidUserInputException(" readDouble() failed."+"Input data not numeric");
 				}
-				return tokenizer.nval;
+				return tokenizer.nval;                //storing the value in integer nval
 				}
 			public String readString() throws InvalidUserInputException {
-				if (readToken() == tokenizer.TT_WORD || ttype == '\"'|| ttype == '\'') {
-				return tokenizer.sval;
+				if (readToken() == tokenizer.TT_WORD || ttype == '\"'|| ttype == '\'') {  //conduction for checking whether the data entered is Word or not
+				return tokenizer.sval;                  //storing the data in string sval
 				} else {
 				throw new InvalidUserInputException(" readString() failed. "+ "Input data is not a string");
 		}				
 	}
 }
+/*	public int readInt() throws InvalidUserInputException {
+if (readToken() != tokenizer.TT_NUMBER) {  
+	throw new InvalidUserInputException(" readInt() failed. "+"Input data not numeric");
+	}
+	if (tokenizer.nval > (double) Integer.MAX_VALUE
+	|| tokenizer.nval < (double) Integer.MIN_VALUE) {
+	throw new InvalidUserInputException(" readInt() failed."+ "Input outside range of type int ");
+	}
+	if (tokenizer.nval != (double) (int) tokenizer.nval) {
+	throw new InvalidUserInputException(" readInt() failed."+ "Input not an integer");
+	}
+	return (int) tokenizer.nval;
+	}*/
