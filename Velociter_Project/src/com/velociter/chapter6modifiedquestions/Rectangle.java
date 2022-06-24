@@ -15,7 +15,7 @@ public class Rectangle extends Shape2{
 	System.out.print("A rectangle whose length = "+length);
 	System.out.print(" ;  width  = "+ width );
        result=length*width;
-       System.out.println(" ;  Area of rectangle      = "+result);
+       System.out.println(";  Area of rectangle      = "+result);
 		return 0;
 	}
 
@@ -23,7 +23,7 @@ public class Rectangle extends Shape2{
 		System.out.print("A rectangle whose length = "+length);
 		System.out.print(" ;  width  = "+ width );
 	      result=(2*(length+width));
-	      System.out.println(" ;  Perimeter of rectangle = "+result);
+	      System.out.println(";  Perimeter of rectangle = "+result);
 		 return 0;
 	}
 	

@@ -9,16 +9,16 @@ import java.io.Reader;
 public class StreamTokenizerDemo {
 
 public static void main(String[] args)throws IOException {
-		StreamTokenizer StreamTokenizer=null;
-		StringReader stringReader=new StringReader("there is 1 tokenizer:");
 		
-		 StreamTokenizer = new StreamTokenizer(stringReader);
+	StringReader stringReader=new StringReader("There is 1 StreamTokenizer class and 2 StringReader class :");
+		
+	StreamTokenizer StreamTokenizer = new StreamTokenizer(stringReader);
 
 	while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {
 			if(StreamTokenizer.ttype==StreamTokenizer.TT_WORD) {
 				System.out.println("Inside TT_Word:"+StreamTokenizer.sval);
 			}
-			else if(StreamTokenizer.ttype==java.io.StreamTokenizer.TT_NUMBER){
+			else if(StreamTokenizer.ttype==StreamTokenizer.TT_NUMBER){
 				System.out.println("Inside TT_Number:"+StreamTokenizer.nval);
 			}
 		
