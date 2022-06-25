@@ -20,6 +20,10 @@ public class Conversion {
 			 System.out.println("Conversion in octal="+octal);
 			}
 		public void hexaDecimal(int number) {
+			if(number==0) {
+				System.out.println("Conversion in hexadecimal="+number);
+			}
+			else {
 			 String hexadecimal="";
 			 int temp=0;
 			 for(number=number;number>0;) {
@@ -28,32 +32,32 @@ public class Conversion {
 				 number=number/16;
 				 switch(temp) {
 				 case 10:
-					 hexadecimal=" "+"A"+hexadecimal;
+					 hexadecimal="A"+hexadecimal;
 					 break;
 				 case 11:
-					 hexadecimal=" "+"B"+hexadecimal;
+					 hexadecimal="B"+hexadecimal;
 					 break;
 				 case 12:
-					 hexadecimal=" "+"C"+hexadecimal;
+					 hexadecimal="C"+hexadecimal;
 					 break;
 				 case 13:
-					 hexadecimal=" "+"D"+hexadecimal;
+					 hexadecimal="D"+hexadecimal;
 					 break;
 				 case 14:
-					 hexadecimal=" "+"E"+hexadecimal;
+					 hexadecimal="E"+hexadecimal;
 					 break;
 				 case 15:
-					 hexadecimal=" "+"F"+hexadecimal;
+					 hexadecimal="F"+hexadecimal;
 					 break;
 				 default:
-					 hexadecimal=" "+temp+hexadecimal;
+					 hexadecimal=temp+hexadecimal;
 					
 		 }
-//			 hexadecimal=temp+hexadecimal;
-			// System.out.print("Conversion in hexadecimal="+hexadecimal);
-			 }
+		}
+	
 			 System.out.print("Conversion in hexadecimal="+hexadecimal);
-		}	 
+		}
+	}	 
 		public static void main(String[] args) {
 			System.out.println("Enter a number:");
 			Scanner scan=new Scanner(System.in);

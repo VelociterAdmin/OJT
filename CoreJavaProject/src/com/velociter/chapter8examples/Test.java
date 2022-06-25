@@ -3,6 +3,32 @@ import java.io.*;
 import java.util.*;
 public class Test { 
 	public static void main(String[] args) throws IOException {
+	StreamTokenizer streamTokenizer = new StreamTokenizer(System.in);                         // (new BufferedReader(new InputStreamReader(System.in)));
+//	StringReader stringReader= new StringReader("my name is danish");
+	while(streamTokenizer.nextToken()!=streamTokenizer.TT_EOF){
+		if(streamTokenizer.ttype==streamTokenizer.TT_WORD) {
+			System.out.println(streamTokenizer.sval+",");
+		}
+		else if(streamTokenizer.ttype==streamTokenizer.TT_NUMBER) {
+			System.out.println(streamTokenizer.nval);
+		}
+	}
+ }	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public static void main(String[] args) throws IOException {
 		int count = 0;
 		for(int ch = 'a' ; ch<= 'z' ; ch++) {
 		System.out.printf("  %1$4c%1$4x", ch);
@@ -11,7 +37,7 @@ public class Test {
 		}
 		}
 		
-	}
+	}*/
 	/*	Test t=new Test();
 		t.readToken();
 		t.readInt();
@@ -44,4 +70,4 @@ public class Test {
 		  return 0;
  
 }*/
-}
+
