@@ -7,6 +7,6 @@ public class InvalidUserInputException extends Exception{
 		super(message);   //print messages of base class
 		
 	}
-	
+		
 
 }

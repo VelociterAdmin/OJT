@@ -1,27 +1,25 @@
 package com.velociter.chapter8;
-
+import java.io.BufferedReader;        
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.io.StringReader;
-import java.io.Reader;
+
 
 public class StreamTokenizerDemo {
 
 public static void main(String[] args)throws IOException {
-		
-	StringReader stringReader=new StringReader("There is 1 StreamTokenizer class and 2 StringReader class :");
-		
-	StreamTokenizer StreamTokenizer = new StreamTokenizer(stringReader);
-
-	while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {
+ System.out.println("Enter values by Keyboard:");	//Enter the value	
+StreamTokenizer StreamTokenizer = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+	
+	while(StreamTokenizer.nextToken()!=StreamTokenizer.TT_EOF) {//used while loop for 
 			if(StreamTokenizer.ttype==StreamTokenizer.TT_WORD) {
-				System.out.println("Inside TT_Word:"+StreamTokenizer.sval);
+				System.out.println(StreamTokenizer.sval+",");
 			}
 			else if(StreamTokenizer.ttype==StreamTokenizer.TT_NUMBER){
-				System.out.println("Inside TT_Number:"+StreamTokenizer.nval);
+				System.out.println(StreamTokenizer.nval);
 			}
-		
+	
 		}
 	}
 }

@@ -31,18 +31,48 @@ public class NumberSystemConversion {
 	public void getDecimalToHexaDecimal(int num) {
 	
 	String HexaDecimal="";
+	if(num==0) {
+		System.out.println("Convert to Hexadecimal:"+num);
+	}
+	else {	
 	
-	while(num>16)
+	
+	while(num>0)
 	{
-		
-	  HexaDecimal=num%6+HexaDecimal;
+	int hexa;	
+	  hexa=num%16;
 	  num=num/16;
+	  switch(hexa) {
+	  case 10:
+		  HexaDecimal="A"+HexaDecimal;
+		  break;
+	  case 11:
+		  HexaDecimal="B"+HexaDecimal;
+		  break;
+	  case 12:
+		  HexaDecimal="C"+HexaDecimal;
+		  break;
+	  case 13:
+		  HexaDecimal="D"+HexaDecimal;
+		  break;
+	  case 14:
+		  HexaDecimal="E"+HexaDecimal;
+		  break;
+	  case 15:
+		  HexaDecimal="F"+HexaDecimal;
+		  break;
+	  default:
+		  HexaDecimal=hexa+HexaDecimal;
+		  break; 
+	  
+	  }
 	
 	}
-	  HexaDecimal=num+HexaDecimal;
-		System.out.println("Convert to HexaDecimal :"+HexaDecimal);
+	System.out.print("Convert to Hexadecimal:"+HexaDecimal);
+	  
+		//System.out.println((num == 0 ? "0" :""));
 	}
-
+}
 	
 	public static void main(String[] args) {
 		Scanner scanner =new Scanner(System.in);
