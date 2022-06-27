@@ -2,6 +2,7 @@ package com.velociter.chapter4;
 
 public class SortingString {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		String text = "You should now be thoroughly familiar with how to create and use arrays. Most people have little trouble dealing with one-dimensional arrays, but arrays of arrays are a bit trickier so try to practice using these.";
 		int spaces = 0, vowels = 0, letters=0;

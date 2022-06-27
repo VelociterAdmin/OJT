@@ -28,7 +28,7 @@ public class ArrayOfArrays {
 																		//Generate random temperature and storing it in temperature[]
 		for(int i=0; i<temperature.length; i++) {
 			for(int j=0;j < temperature[i].length; j++) {
-				temperature[i][j] = (float) (45*Math.random()-10);
+				temperature[i][j] = (float) (100*Math.random()-50);
 
 			}
 		}
