@@ -1,6 +1,6 @@
 package com.velociter.chapter4;
 /*
-Define an array of ten String elements each containing an arbitrary string of the form
+Define an array of 10 String elements each containing an arbitrary string of the form
 "month/day/year"; for example,"10/29/99" or "12/5/01". Analyze each element in the
 array and output the date represented in the form 29th October 1999
  */
@@ -22,6 +22,7 @@ public class DateFormat {
 			String yearSubString =dateOfYear[i].substring(6);			//String to store subString for year
 			year[i] = yearSubString;									//storing year in year[]
 		}
+		
 		
 		for(int i=0; i<month.length; i++) {
 			switch(month[i]) {											//converting months 1,2,3 into January.Feburary.....
@@ -62,11 +63,10 @@ public class DateFormat {
 				month[i]= "December";
 				break;
 			}
-			
 			if((Integer.parseInt(year[i]))>22) { 										//converting year 99 to 1999	
 				year[i] = "19"+year[i];
 			}
-			else {
+			else {	
 				year[i] = "20"+year[i];
 				}
 			char lastChar = day[i].charAt(day[i].length()-1);							//converting 1,2,3 to 1st,2nd,3rd
