@@ -4,10 +4,10 @@ public class TryFile {
 	//chapter 9 example                                                   
     public static void main(String[] args) {
                                                     // Create an object that is a directory
-       File myDir = new File("F:/Training/OJT/CoreJavaProject/src/com/velociter");
+       File myDir = new File("F:\\camera");
        System.out.println(myDir + (myDir.isDirectory() ? " is" : " is not")+ " a directory.");
                                                           // Create an object that is a file
-       File myFile = new File(myDir,"DislpayMonthAndDecimal.java");
+       File myFile = new File(myDir,"IMG_20190523_121204.jpg");
        
        System.out.println(myFile + (myFile.exists() ? " does" : " does not")+ " exist");
        
