@@ -1,5 +1,5 @@
 package com.velociter.chapter4;
-
+//chapter 4
 import java.util.Scanner;
 
 /*
@@ -13,20 +13,22 @@ b. If the first element of any pair is greater than the second, interchange the 
 c. Repeat the process for the whole array until no interchanges are necessary. The array
    elements will now be in ascending order.
 */
+
 public class BobbleSort {
 
-	@SuppressWarnings({ "unused", "resource" })
+	@SuppressWarnings({ "resource" })
 	public static void main(String[] args){
 		//Scanner to scan the order:
 		Scanner scan = new Scanner(System.in);
 		//String veriable to store peragraph
-		String text = "Write a program that sets up a String variable containing a paragraph of text of your choice.\r\n"
-				+ "Extract the words from the text and sort them into alphabetical order. Display the sorted list of\r\n"
-				+ "words. You could use a simple sorting method called the bubble sort.";
+		String text = "Write a program that sets up a String variable containing a paragraph of text of your. choice\r\n"
+				+ "Extract the words from the text and sort them into alphabetical order Display the sorted list of\r\n"
+				+ "words. You could use a simple sorting method called the bubble sort,insertion sort.";
+		
 		//String[] to split peragraph
-		String[] words = text.split(" ");
+		String[] words = text.split("[\\s,.]+");
 		//temperary veriable
-		String temp ="";
+		String temp =new String();
 		//variable to control order
 		int order;
 		//Scanning order
@@ -35,19 +37,20 @@ public class BobbleSort {
 		
 		for(int i=0; i<words.length; i++) {
 			for(int j=i+1; j<words.length; j++) {
-				if(order == 1) {								//for Ascending order
-					
 				
-					if(words[i].compareTo(words[j])>0) {			//words[i] 
+				//If order == 1 print peragraph in ascending order
+				if(order == 1) {									//for Ascending order
+					if(words[i].compareTo(words[j])>0) {			 
 						temp = words[i];							// temp		= words[1]  
 						words[i]=words[j];							// words[1]	= words[2]
 						words[j]=temp;								// words[2]	= temp
 						}
 					}
 				
-				else if(order == 2) {							//for Descending order
+				//If order == 1 print peragraph in descending order
+				else if(order == 2) {								//for Descending order
 					
-					if(words[j].compareTo(words[i])>0) {
+					if(words[j].compareTo(words[i])>0) {			
 						temp = words[i];							// temp 	= words[1]
 						words[i] = words[j];						// words[1]	= words[2]
 						words[j]=temp;								// words[2] = temp

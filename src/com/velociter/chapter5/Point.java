@@ -1,4 +1,4 @@
-package com.velociter.chapter4;
+package com.velociter.chapter5;
 
 class Point {
 	double x,y;														//Cordinates of points
@@ -6,7 +6,7 @@ class Point {
 	//Create a point from Cordinates
 	Point(double xVal,double yVal){
 		x= xVal;
-		y=yVal;
+		y= yVal;
 	}
 	
 	//Create a point from anohter point object
