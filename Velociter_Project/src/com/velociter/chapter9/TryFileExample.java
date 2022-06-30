@@ -1,7 +1,7 @@
 package com.velociter.chapter9;
 
 import java.io.File;
-//Example of chapter 9
+// 1 Example of chapter 9
 public class TryFileExample {
 
 	public static void main(String[] args) {
