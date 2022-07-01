@@ -11,11 +11,13 @@ public class CreatingFile {
 	public static void main(String[] args) throws IOException {
 	//	File tempFile = File.createTempFile("list", ".txt");
 	//	tempFile.deleteOnExit();
-	
+		String name="H:\\newfolder3";
+	    File file=new File(name);
+	    file.mkdir();
 		FileOutputStream outputFile = null;             // Place to store the stream reference
 		try {
 		
-		outputFile = new FileOutputStream("sub.txt");
+		outputFile = new FileOutputStream("H:\\newfolder3\\abc.txt");
 		
 		}
 		catch(FileNotFoundException e) 
