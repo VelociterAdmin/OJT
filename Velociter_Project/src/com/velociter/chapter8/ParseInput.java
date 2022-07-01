@@ -22,8 +22,6 @@ import java.util.Vector;
 		    tokenizer = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		    setTokenizer();
 		  }
-
-		
 		  private void setTokenizer() {
 		    tokenizer.resetSyntax();              
 		    tokenizer.wordChars('\u0000',(char)(separator-1));    
