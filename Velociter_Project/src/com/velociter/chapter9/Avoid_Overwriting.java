@@ -1,11 +1,11 @@
 package com.velociter.chapter9;
+//1 Excersice question:
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.FileNotFoundException;
 import java.io.BufferedReader;
-
 
 public class Avoid_Overwriting {
 
@@ -24,9 +24,9 @@ public class Avoid_Overwriting {
 				} while(newFile.exists());                    // Stop when no such file exists
 				aFile.renameTo(newFile);                      // Rename the file
 				}
-				// Now we can create the new file
+				
 				try {
-				// Create the stream opened to append data
+			    // Now create the new file
 				outputFile = new FileOutputStream(aFile);
 				System.out.println("myFile.txt output stream created");
 				} catch (FileNotFoundException e) {
