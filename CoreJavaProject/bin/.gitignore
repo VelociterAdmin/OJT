@@ -1,5 +1,2 @@
-*.jar
-*.class
-.gitignore
+/TryGeometry/
 /com/
-/Experiment/
