@@ -21,6 +21,7 @@ public class InitializeBlock {
 	}
 	
 	
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		System.out.println("\n No Object");
 		InitializeBlock.listValues();

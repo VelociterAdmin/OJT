@@ -24,7 +24,7 @@ public class BobbleSort {
 		String text = "Write a program that sets up a String variable containing a paragraph of text of your. choice\r\n"
 				+ "Extract the words from the text and sort them into alphabetical order Display the sorted list of\r\n"
 				+ "words. You could use a simple sorting method called the bubble sort,insertion sort.";
-		
+//		text = "A quick brown fox jumped over the lazy dogs";
 		//String[] to split peragraph
 		String[] words = text.split("[\\s,.]+");
 		//temperary veriable
