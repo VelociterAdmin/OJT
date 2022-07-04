@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
     public static void main(String[] args) {
     	
     	
-    String filepath = "H:\\newfolder3\\abc.txt";
+    String filepath = "H:\\newfolder2\\newfile.txt";
     
     File aFile = new File(filepath);
     
@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
      {
      String name = newFile.getName();                   // Get the name of the file
      int period = name.indexOf('.');                                  //  separator for the extension
-     newFile = new File(newFile.getParent(),name.substring(0, period) + "_old8"+ name.substring(period));
+     newFile = new File(newFile.getParent(),name.substring(0, period) + "old"+ name.substring(period));
      }
      while(newFile.exists());                           // Stop when no such file exists
      aFile.renameTo(newFile);                             // Rename the file
