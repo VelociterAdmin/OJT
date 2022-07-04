@@ -1,5 +1,5 @@
 package com.velociter.chapter9;
-//1 Excersice question:
+//1 Exercise question:
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
