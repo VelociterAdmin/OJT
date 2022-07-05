@@ -1,6 +1,6 @@
 package com.velociter.chapter6;
 
-public abstract class Animal {
+public abstract class Animal implements Cloneable {
 
 	public abstract void sound();
 	

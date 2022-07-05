@@ -19,7 +19,6 @@ public class PolyLine {
 			}
 		}
 	}
-
 	
 	//Add points object to the list
 	public void addPoint(Point point) {

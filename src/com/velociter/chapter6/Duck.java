@@ -1,6 +1,9 @@
 package com.velociter.chapter6;
 
 public class Duck extends Animal {
+	public void layEgg() {
+		System.out.println("Egg laid");
+	}
 	public Duck(String aName) {
 		super("Duck");
 		name = aName;
@@ -20,5 +23,6 @@ public class Duck extends Animal {
 	public void sound() {
 		System.out.println("Quack quackquack");
 	}
+	
 	private String name,breed;
 }

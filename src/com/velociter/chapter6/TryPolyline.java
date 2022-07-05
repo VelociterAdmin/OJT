@@ -1,6 +1,5 @@
 package com.velociter.chapter6;
 
-
 public class TryPolyline {
 	
 	public static void main(String[] args) {
