@@ -1,1 +1,6 @@
 /com/
+/.classpath
+/.project
+/.settings/
+/build/
+/src/

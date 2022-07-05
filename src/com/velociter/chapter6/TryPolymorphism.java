@@ -1,9 +1,9 @@
 package com.velociter.chapter6;
 import java.util.Random;
+
 public class TryPolymorphism {
 
 	public static void main(String[] args) {
-		
 		Animal[] theAnimals = {
 								new Dog("Rover","Poodle"),
 								new Cat("Max","Abyssinian"),

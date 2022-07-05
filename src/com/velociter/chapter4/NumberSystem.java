@@ -18,14 +18,15 @@ public class NumberSystem {
 			rem = decimal%2;									//dividing number by 2 and storing reminder
 			decimal = decimal/2;								//dividing number by 2
 			toBinari = rem+toBinari;							//storing Binary value
+//			System.out.print(rem);								//11010111001
 		}
 //		toBinari = rem+toBinari;
-		System.out.println(toBinari);
+		System.out.println(toBinari);							//10011101011
 	}
 	static void toOctal(int decimal) {
 		int rem=0;												//Reminder to store
 		String toOct = "";										//String to store octal number
-		System.out.print("Decimal "+ decimal+" to Octal : ");
+		System.out.println("Decimal "+ decimal+" to Octal : ");
 		if(decimal==0)
 			toOct = "0";
 		while(decimal>0) {
