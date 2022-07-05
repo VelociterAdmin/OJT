@@ -12,7 +12,7 @@ public class CreateTempFile {
 		tempFile.deleteOnExit();
 		FileOutputStream outputFile = null; //  store the stream reference
 		try {
-		outputFile = new FileOutputStream("ReverseTheSequenceOfLetter.java");
+		outputFile = new FileOutputStream("F:\\new\\new 1\\create.txt");
 		} catch(FileNotFoundException e) {
 		e.printStackTrace(System.err);
 		}
