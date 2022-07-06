@@ -9,7 +9,7 @@ import java.io.IOException;
 public class Write_File {
 
 	public static void main(String[] args) throws IOException {
-		FileWriter File = new FileWriter("F:\\new.txt");
+		FileWriter File = new FileWriter("F:\\new.txt");     
 	    BufferedWriter buffer=new BufferedWriter(File);
 	    buffer.write("This is a text file");
 	    buffer.close();
