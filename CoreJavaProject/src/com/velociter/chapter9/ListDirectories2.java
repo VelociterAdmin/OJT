@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileFilter;
 public class ListDirectories2 {
 	public static void main(String[] args) {
-	  File myDir = new File("H:\\directories");                                                                // Create an object that is a directory
+	  File myDir = new File("C:");                                                                // Create an object that is a directory
 	  
    // FileFilter select = new ListDirectory(" ");                                                    // Define a filter for java source files beginning with C
                                                                                                      

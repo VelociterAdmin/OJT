@@ -1,18 +1,26 @@
 package com.velociter.chapter10example;
 
+import java.nio.ByteBuffer;
+//example of chapter 10
+//allocating a new capacity of size and position to bytebuffer and checking whether there is space left. 
 public class Test {
 
 	public static void main(String[] args) {
-		buf.position(0).limit(newLimit).position(newPosition);
-		if(newPosition >= 0 && newLimit > newPosition) {
-			buf.position(0).limit(newLimit).position(newPosition);
-			} else {
-			System.out.printn("Illegal position:limit settings"+ "Position: " + newPosition + " Limit: "+ newLimit);
-			}
-		if (buf.hasRemaining()) {                                                  // If limit-position is >0
-			System.out.println("We have space in the buffer!");
-			}
-       
+		int oldSpace=11;                                            /* defined three integers oldspace,newspace and newposition*/
+	    int newLimit=10;
+	    int newPosition=5;
+	    ByteBuffer buf=ByteBuffer.allocate(oldSpace);              //created a variable of class type buf
+	    buf.position(0).limit(newLimit).position(newPosition);
+	    if(newPosition >= 0 && newLimit > newPosition) {
+	    	buf.limit(newLimit).position(newPosition);
+	    	} 
+	    else {
+	    	System.out.println("Illegal position:limit settings."+ "Position: " + newPosition + " Limit: "+ newLimit);
+	    	}
+	    if (buf.hasRemaining()) {                                                   // If limit-position is >0
+	    	System.out.println("We have space in the buffer!");
+	    	}
+	    System.out.println("The buffer can accommodate " + buf.remaining() +" more elements.");
 	}
-
 }
+

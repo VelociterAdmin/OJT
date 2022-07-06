@@ -37,11 +37,11 @@ public class ListDirectories implements FileFilter{
 	    System.out.println(space.toString()+name);       
 	    space.append("  ");                               
 	    File[] fileList = rootDirectory.listFiles(this); 
-	 
+	    
 	    if(fileList != null)                              
 	      for(int count = 0 ; count<fileList.length ; count++)         
 	        listDirectories(fileList[count]);
-
+            
 	    space.delete(space.length()-2, space.length()); 
 	    return;                                            
 	  }

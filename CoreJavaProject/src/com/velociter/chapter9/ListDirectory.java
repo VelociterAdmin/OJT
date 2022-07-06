@@ -9,7 +9,6 @@ public class ListDirectory implements FileFilter{
 
 	  public static void main(String[] args) {
 	    File[] roots = null;
-
 	    if(args.length>0) {                               // Check for command line argument                            
 	      File directory = new File(args[0]);
 	      if(directory.isDirectory()) {                   // If it is a directory
@@ -22,7 +21,7 @@ public class ListDirectory implements FileFilter{
 	    }
 	    else                                               // If no command line argument
 	      roots = File.listRoots();                        // get the sytem roots
-	                              
+	    
 	    ListDirectory lister = new ListDirectory();    // Create object to do the listing
 	    for(int count = 0 ; count<roots.length ; count++)              // and list all the directories
 	      lister.listDirectories(roots[count]);
@@ -32,10 +31,11 @@ public class ListDirectory implements FileFilter{
 	  private void listDirectories(File rootDirectory) {
 	    String name = rootDirectory.getName();
 	    if(name.length()==0)                              
-	      name = rootDirectory.getPath();                  
+	      name = rootDirectory.getPath();
+	    
 	    System.out.println(indent.toString()+name);       
 	    indent.append("  ");                               
-	    File[] fileList = rootDirectory.listFiles(this);   
+	    File[] fileList = rootDirectory.listFiles(this);
 	    if(fileList != null)                              
 	      for(int count = 0 ; count<fileList.length ; count++)         
 	        listDirectories(fileList[count]);
