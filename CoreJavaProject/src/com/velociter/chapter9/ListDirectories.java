@@ -35,6 +35,7 @@ public class ListDirectories implements FileFilter{
 	    if(name.length()==0)                              
 	      name = rootDirectory.getPath();                  
 	    System.out.println(space.toString()+name);       
+
 	    space.append("  ");                               
 	    File[] fileList = rootDirectory.listFiles(this); 
 	    
