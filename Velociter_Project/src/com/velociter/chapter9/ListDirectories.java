@@ -11,11 +11,7 @@ public class ListDirectories implements FileFilter{
 	 private static StringBuffer indent = new StringBuffer();
 
 	  public static void main(String[] args) {
-		  long start=0;
-		  long end=0;
-		  start=System.currentTimeMillis();
-		  IntStream.range(1, 100).parallel().forEach(System.out::println);
-		  
+		 
 	    File[] roots = null;
 
 	    if(args.length>0) {                               // Check for command line argument                            
@@ -27,12 +23,11 @@ public class ListDirectories implements FileFilter{
 	        System.out.println(directory.getName()+" is not a directory");
 	        System.exit(1);
 	      }
-	      end=System.currentTimeMillis();
-	      System.out.println("time take="+(end-start));
+	    
 	    }
 	   
 	    else                                               // If no command line argument
-	      roots = File.listRoots();     // get the sytem roots
+	      roots = File.listRoots();     // get the system roots
 	                              
 	    ListDirectories lister = new ListDirectories();    // Create object to do the listing
 	    for(int count = 0 ; count<roots.length ; count++)              // and list all the directories
