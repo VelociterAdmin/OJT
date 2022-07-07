@@ -1,7 +1,7 @@
 package com.velociter.chapter6;
 	
 	public class JacketSize {
-		public enum Size {small(36), medium(40), large(42), extra_large(46), extra_extra_large(48)};
+		//public enum Size {small(36), medium(40), large(42), extra_large(46), extra_extra_large(48)};
 		
 		//Constructor
 		public JacketSize(int chestSize) {
