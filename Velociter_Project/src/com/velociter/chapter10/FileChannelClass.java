@@ -3,6 +3,7 @@ package com.velociter.chapter10;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.channels.*;
  // 2 example of chapter 10;
 
