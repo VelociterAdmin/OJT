@@ -6,10 +6,10 @@ import java.nio.ByteBuffer;
 public class NewCapacity {
 
 	public static void main(String[] args) {
-		int oldSpace=1024;                                            /* defined three integers oldspace,newspace and newposition*/
+		int oldSpace=1024;                                            // defined three integers oldspace,newspace and newposition
 	    int newLimit=10;
 	    int newPosition=5;
-	    ByteBuffer buf=ByteBuffer.allocate(oldSpace);              //created a variable of class type buf
+	    ByteBuffer buf=ByteBuffer.allocate(oldSpace);              //created a variable buf of class type 
 	    buf.limit(newLimit).position(newPosition);
 	    if(newPosition >= 0 && newLimit > newPosition) {
 	    	buf.limit(newLimit).position(newPosition);
