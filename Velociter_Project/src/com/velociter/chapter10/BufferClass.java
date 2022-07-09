@@ -2,7 +2,7 @@ package com.velociter.chapter10;
 
 import java.nio.ByteBuffer;
 //3 Example of chapter 10
-//allocating a new capacity of size and position to bytebuffer and checking whether there space is left;
+//allocating a new capacity of size and position to ByteBuffer and checking whether there space is left;
 public class BufferClass {
 
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class BufferClass {
 			 System.out.println("Illegal position : limit setting."+"Position:" + newPosition +"Limit:"+newLimit);
 		 } 
 	 // hasRemaining method return the number of elements between the current position and the limit
-		 if (buf.hasRemaining())      // If limit-position is >0
+		 if (buf.hasRemaining())     
 		 { 
 			 System.out.println(" We have space in the buffer!");
 			
