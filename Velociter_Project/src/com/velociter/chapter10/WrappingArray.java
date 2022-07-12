@@ -3,7 +3,7 @@ package com.velociter.chapter10;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.LongBuffer;
-
+//5 Example of Chapter 10;
 public class WrappingArray {
 
 	public static void main(String[] args) {

@@ -2,30 +2,18 @@ package com.velociter.chapter10;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
-
+import java.nio.DoubleBuffer;
+// 4 Example of Chapter 10;
 public class TransferringDataIntoABuffer {
 
 	public static void main(String[] args) {
 		String text = "Value of e";
-		ByteBuffer buf = ByteBuffer.allocate(text.length()+ sizeof(Math.E));
-		buf.put(text.getBytes()).putDouble(Math.E);
-		char[] array = text.toCharArray(); // Create char[] array from the string
-		ByteBuffer buf2 = ByteBuffer.allocate(5); 
-		// Now use a loop to transfer array elements one at a time
-		for (char ch: array) {
-		buf.putChar(ch);
-		}
-		buf.putDouble(Math.E); // Transfer the binary double value
+		ByteBuffer buf = ByteBuffer.allocate(50); // The original byte buffer
+		CharBuffer charBuf = buf.asCharBuffer(); // Create view buffer
+		charBuf.put(text); // Transfer string via view buffer
+		// Update byte buffer position by the number of bytes we have transferred
+		buf.position(buf.position() + 2*charBuf.position());
+		buf.putDouble(Math.E); // Transfer binary double value
 		
-	
 	}
-
-	private static int sizeof(double e) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-
-	}
-
-
+}

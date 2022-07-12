@@ -1,5 +1,6 @@
 package com.velociter.chapter4;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class RectangularArray {
@@ -36,14 +37,4 @@ public class RectangularArray {
 		    }
 	     }
 
-	}
-
-
-	    
-
-	
-
-
-
-
-
+}
