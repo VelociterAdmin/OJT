@@ -7,6 +7,9 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.ResourceBundle;
 
 //chapter 10th example
 //code to write a string in a file. if file do not exist then create it and write the string.
@@ -30,10 +33,8 @@ public class WriteAString {
 		File aFile = new File(dir, filename); // File object for the file path
 		FileOutputStream outputFile = null; // Place to store the stream reference
 		try {
-			boolean b ;
-		    //	String s = "C://Beg Java Stuff//trueFalse.txt";
-			FileReader fr=new FileReader("C://Beg Java Stuff//trueFalse.txt");
-			outputFile = new FileOutputStream(aFile,true);
+			ResourceBundle r=ResourceBundle.getBundle("F:\\Training\\OJT\\CoreJavaProject\\Switch.properties");
+			outputFile = new FileOutputStream(aFile,);
 			System.out.println("File stream created successfully.");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace(System.err);
