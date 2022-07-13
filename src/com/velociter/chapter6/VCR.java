@@ -1,6 +1,7 @@
 package com.velociter.chapter6;
 import static java.lang.Math.min;
 import static java.lang.Math.max;
+
 public class VCR implements RemoteControl {
 	public VCR(String make) {
 		this.make = make;
@@ -12,36 +13,36 @@ public class VCR implements RemoteControl {
 		return power;
 	}
 	
-	public int volumeUp(int increment) {
+	public int volumeUp() {
 		if(!power) {					//If power is off
 			return 0;					//do nothing
 		}
 		
 		//Set volume -  must not be greater then MAX_VOLUME
-		volume += increment;
+		volume += 10;
 		volume = min(volume , MAX_VOLUME);
-		System.out.println(make+ " VCR volume level :"+volume);
+		System.out.println(make+ " VCR volume incresed to level :"+volume);
 		return volume;
 	}
 	
-	public int volumeDown(int decrement) {
+	public int volumeDown() {
 		if(!power) {							//If power off
 			return 0;							//do nothing
 		}
 		
 		//Set volume - must not be greater then MIN_VOLUME
-		volume-=decrement;
-		volume = min(volume, MIN_VOLUME);
-		System.out.println(make+" VCR volume level :"+volume);
+		volume -= 10;
+		volume = max(volume, MIN_VOLUME);
+		System.out.println(make+" VCR volume decresed to level :"+volume);
 		return volume;
 	}
 	
 	public void mute() {
 		if(!power) {							//If power off
-			return;							//do nothing
+			return;								//do nothing
 		}
 		volume = MIN_VOLUME;
-		System.out.println(make+ " VCR volume level"+volume);
+		System.out.println(make+ " VCR volume level :"+volume);
 	}
 	
 	public int setChannel(int newChannel) {
@@ -83,7 +84,7 @@ public class VCR implements RemoteControl {
 	private boolean power = false;
 	
 	private int MIN_VOLUME = 0;
-	private int MAX_VOLUME =100;
+	private int MAX_VOLUME = 100;
 	private int volume = MIN_VOLUME;
 	
 	private int MIN_CHANNEL = 0;
