@@ -1,60 +1,55 @@
 package com.velociter.chapter10;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.io.PrintWriter;
-
-public class TestClass {
-	public static void main(String[] args) {
+import java.util.Scanner;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfObject;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.velociter.chapter4.RectangularArray;
+public class TestClass extends RectangularArray{
+	
+	public static void main(String[] args)  {
+		
+		 /* Document doc = new Document();
+		  PdfWriter writer = PdfWriter.getInstance(doc,new FileOutputStream("F:\\File Accessing\\NewPdf2.pdf"));
+		  System.out.println("PDF created.");
+		 */
 
 		try {
-			// create an print writer for writing to a file
-			PrintWriter out = new PrintWriter(new FileWriter("D:\\Training\\OJT\\Velociter_Project\\src\\com\\velociter\\chapter4\\RectangularArray.java"));
-			// create a buffered reader that connects to the console, we use it so we can
-			// read lines
-			BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-			// read a line from the console
-			String lineFromInput = in.readLine();
+			// Creating file output stream
+			PrintStream fileOut = new PrintStream("F:\\File Accessing\\NewFile.txt");
 
-		/*	int n = 99;
-			int m = 99;
+			System.out.println("Data is printed :");
 
-			int[][] table = new int[n][m];
+			// Redirecting standard console output to a file.
+			System.setOut(fileOut);
 
-			for (int i = 0; i < table.length; ++i) {
-				for (int j = 0; j < table[i].length; ++j) {
-					table[i][j] = (i + 1) * (j + 1);
-				}
-			}
+			// Get input using Scanner from Console
+			Scanner scanner = new Scanner(System.in);
+            
+			// Read string line.
+		
+			RectangularArray arrayobj=new RectangularArray();
+			arrayobj.array();
+			String inputLine = scanner.nextLine();
+			System.out.println(inputLine);
 
-			System.out.print("       ");
-			for (int j = 1; j <= table[0].length; ++j) {
-				System.out.print((j < 10 ? "    " : "   ") + j);
-			}
-			System.out.println(" \n ");
+			// Get next user input line text.
+			inputLine = scanner.nextLine();
 
-			for (int i = 0; i < table.length; ++i) {
-				System.out.print("Row" + (i < 9 ? "  " : " ") + (i + 1) + ":");
-
-				for (int j = 0; j < table[i].length; ++j) {
-					System.out.print((table[i][j] < 10 ? "   " : table[i][j] < 100 ? "  " : " ")
-							+ (table[i][j] < 1000 ? " " : "") + table[i][j]);
-				}
-				System.out.println();
-			}*/
-
-			// output to the file a line
-			out.println(lineFromInput);
-
-			// close the file (VERY IMPORTANT!)
-			out.close();
-		} catch (IOException e1) {
-			System.out.println("Error during reading/writing");
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
 		}
-
 	}
-
-}
+	}
