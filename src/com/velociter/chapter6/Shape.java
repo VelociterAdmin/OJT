@@ -12,15 +12,15 @@ package com.velociter.chapter6;
 
 public abstract class Shape {
 	
-	public double move()
+	public void move(double xDelta,double yDelta)
 	{
-		return 0;
+		position.x += xDelta;
+		position.y += yDelta;
 	}
 	
 	public abstract void show();
 	
-	protected double x; 								//Variable for X point
-	protected double y;									//Variable for Y point
 	
+	protected Point position;
 	
 }
