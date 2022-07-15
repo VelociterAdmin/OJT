@@ -29,9 +29,8 @@ public class CreatePDF extends RectangularArray {
 			doc.open();
 			Font font=FontFactory.getFont(FontFactory.COURIER,20,BaseColor.BLUE);
 			doc.add(new Paragraph("Hello World..."));
-			
 			doc.close();
-			writer.close();
+			
 		} catch (DocumentException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
