@@ -3,23 +3,25 @@ package com.velociter.chapter10example;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.nio.channels.FileChannel;
 import java.util.ResourceBundle;
 
 public class NewTest {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		ResourceBundle bundle=ResourceBundle.getBundle("Switch");
-		System.out.println(bundle);
-		System.out.println(bundle.getString("switch").hashCode());
-		System.out.println("true".hashCode());
-		int a=bundle.getString("switch").hashCode();
-		int b="true".hashCode();
-		if (a==b) {
-			System.out.println("hello guys chai pelo");
-		}
-		else {
-			System.out.println("bhad me jao guys");
-		}
+     File file=new File("");
+     FileOutputStream outputStream=null;
+     try {
+    	 outputStream =new FileOutputStream("");
+    	 
+     }
+	 catch (FileNotFoundException e) {
+		e.printStackTrace(System.err);
+		System.exit(1);
+		 
+     }
+     FileChannel channel= outputStream.getChannel();
+     
 	}
 
 }
