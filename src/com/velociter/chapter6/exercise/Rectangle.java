@@ -4,6 +4,8 @@ package com.velociter.chapter6.exercise;
  * 
  * 
  */
+
+
 public class Rectangle extends Shape{
 	Point topLeft;
 	Point bottomRight;
