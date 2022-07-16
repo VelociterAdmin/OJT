@@ -1,4 +1,4 @@
-//package com.velociter.chapter2;
+package com.velociter.chapter2;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 package com.velociter.chapter3;
 
-public class Enum {
+public class Enumoldold {
 	//enum Color{RED,BLUE,GREEN,YELLOW}
 	//public enum Season { WINTER, SPRING, SUMMER, FALL }  
 
