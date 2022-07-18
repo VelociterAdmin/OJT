@@ -1,25 +1,37 @@
 package com.velociter.chapter10;
 
+import java.io.BufferedReader;
 // 10 Example of chapter 10;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
+import java.util.StringTokenizer;
 
 // Writing Multiple Strings to a File
 public class WriteMultipleStringToAFile {
+		String[] sayings = { " Indecision maximizes flexibility.", " Only the mediocre are always at their best.",
+			" A little knowledge is a dangerous thing.", " Many a mickle makes a muckle.",
+			" Who begins too much achieves little.", " Who knows most says least.",
+			" A wise man sits on the hole in his carpet." };
+	
 
-	public static void main(String[] args) {
-		String dirName = "F:\\new";           // Directory for the output file
+	public static void main(String[] args) throws IOException {
+		
+		String dirName = "F:\\new";             // Directory for the output file
 		String fileName = "Proverbs.txt";         // Name of the output file
 		String[] sayings = { " Indecision maximizes flexibility.", " Only the mediocre are always at their best.",
 				" A little knowledge is a dangerous thing.", " Many a mickle makes a muckle.",
 				" Who begins too much achieves little.", " Who knows most says least.",
 				" A wise man sits on the hole in his carpet." };
+		
 		File aFile = new File(dirName, fileName);
+		
 		FileOutputStream outputFile = null;
 		try {
 			outputFile = new FileOutputStream(aFile, false);
@@ -27,24 +39,25 @@ public class WriteMultipleStringToAFile {
 			e.printStackTrace(System.err);
 			System.exit(1);
 		}
-		FileChannel outChannel = outputFile.getChannel();
+		
+	FileChannel outChannel = outputFile.getChannel();
 
 		ByteBuffer buf = ByteBuffer.allocate(1024);
 		CharBuffer charBuf = buf.asCharBuffer();
 
 		char separator = '*';
 
-		/*
-		 * Write the file try { for (String saying : sayings) {
-		 * buf.putInt(saying.length()).asCharBuffer().put(saying);
-		 * buf.position(buf.position() + 2*saying.length()).flip();
-		 * outChannel.write(buf); // Write the buffer to the file channel buf.clear(); }
+		
+		/*  Write the file try { for (String saying : sayings) {
+		  buf.putInt(saying.length()).asCharBuffer().put(saying);
+		  buf.position(buf.position() + 2*saying.length()).flip();
+		  outChannel.write(buf);  // Write the buffer to the file channel buf.clear(); }
 		 */
 
 		// Write the file
 		try {
 			for (int i = 0; i < sayings.length; i++) {
-				if (i > 0) {
+				if (i >=0) {
 					charBuf.put(separator);
 
 				charBuf.put(sayings[i]);
@@ -61,5 +74,5 @@ public class WriteMultipleStringToAFile {
 		}
 		System.exit(0);
 	}
-
 }
+
