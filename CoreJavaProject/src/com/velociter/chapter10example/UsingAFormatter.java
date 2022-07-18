@@ -9,14 +9,16 @@ import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Formatter;
 
+//example of chapter 10
+// Writing the Array of string in format
 public class UsingAFormatter {
 	public static void main(String[] args) {
 		String[] phrases = { "Rome wasn’t burned in a day.", "It’s a bold mouse that sits in the cat’s ear.",
 				"An ounce of practice is worth a pound of instruction." };
-		String dirname = "H:\\Expirement" ;// Directory name
-		String filename = "Format.txt"; // File name
+		String dirname = "H:\\Expirement";                                 // Directory name
+		String filename = "Format.txt";                                    // File name
 
-		File dir = new File(dirname); // File object for directory
+		File dir = new File(dirname);                                     // File object for directory
 		// Now check out the directory
 		if (!dir.exists()) { // If directory does not exist
 			if (!dir.mkdir()) { // create it
@@ -28,8 +30,8 @@ public class UsingAFormatter {
 			System.exit(1);
 		}
 		// Create the filestream
-		File aFile = new File(dir,filename); // File object for the file path
-		FileOutputStream outputFile = null; // Place to store the stream reference
+		File aFile = new File(dir, filename);                               // File object for the file path
+		FileOutputStream outputFile = null;                                  // Place to store the stream reference
 		try {
 			outputFile = new FileOutputStream(aFile, true);
 			System.out.println("File stream created successfully.");
