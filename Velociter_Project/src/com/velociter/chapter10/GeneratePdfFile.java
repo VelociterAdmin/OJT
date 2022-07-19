@@ -2,6 +2,7 @@ package com.velociter.chapter10;
 
 
 import java.io.BufferedReader;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,7 +23,7 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.velociter.chapter4.RectangularArray;
 
-public class GeneratePdfFile {
+public class GeneratePdfFile extends RectangularArray {
  
 	public static void main(String[] args) {
 		
@@ -36,25 +37,33 @@ public class GeneratePdfFile {
 		  }
 	
 }*/
-	
-		//created PDF document instance   
-				Document doc = new Document();
-				try {
-		//generate a PDF at the specified location  
-					PdfWriter writer = PdfWriter.getInstance(doc, new FileOutputStream("F:\\File Accessing\\New.pdf"));
-					System.out.println("PDF created.");
-					doc.open();
-					Font font = FontFactory.getFont(FontFactory.HELVETICA_BOLD);
-				doc.add(new Paragraph("Hello world...."));
-				doc.close();
-					//writer.close();
-				} catch (DocumentException e) {
-					e.printStackTrace();
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
-				}
+		try {
+
+			// Creating file output stream
+			PrintStream fileOut = new PrintStream("F:\\File Accessing\\NewFile2.txt");
+
+			System.out.println("Data is printed :");
+
+			// Redirecting standard console output to a file.
+			System.setOut(fileOut);
+
+			// Get input using Scanner from Console
+			Scanner scanner = new Scanner(System.in);
+            
+			// Read string line.
+		
+			RectangularArray arrayobj=new RectangularArray();
+			arrayobj.array();
+			String inputLine = scanner.nextLine();
+			System.out.println(inputLine);
+
+			// Get next user input line text.
+			inputLine = scanner.nextLine();
+
+		} catch (FileNotFoundException ex) {
+			ex.printStackTrace();
+		}
 	}
-}
-				
+	}		
 	
 

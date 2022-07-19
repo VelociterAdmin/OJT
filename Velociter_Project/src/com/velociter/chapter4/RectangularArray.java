@@ -1,6 +1,7 @@
 package com.velociter.chapter4;
 
 public class RectangularArray {
+	
 
 	public static void main(String[] args) {
 	}
