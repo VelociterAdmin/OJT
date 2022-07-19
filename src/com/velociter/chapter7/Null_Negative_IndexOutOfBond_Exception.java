@@ -7,9 +7,9 @@ package com.velociter.chapter7;
 */
 
 public class Null_Negative_IndexOutOfBond_Exception {
-
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
-
+		
 		int[] array = null;
 		int x ;
 
