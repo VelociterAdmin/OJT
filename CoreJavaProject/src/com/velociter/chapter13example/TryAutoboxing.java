@@ -1,24 +1,26 @@
 package com.velociter.chapter13example;
 
-import java.util.LinkedList;
+//import java.util.LinkedList;
 
-public class TryAutoboxing extends LinkedList {
+public class TryAutoboxing  {
 	public static double toFahrenheit(double temperature)
 	{
 	  	return 1.8*temperature+32;
 	}
 public static void main(String[] args) {
+	
 	LinkedList<Double> temperatures =new LinkedList<Double>();
 	for(int i=0; i<6;i++)
 	{
-		temperatures.add(25*Math.random());
+		temperatures.addItem(25*Math.random());
 	}
-	System.out.printf("%2f Degrees Fahrenheit",toFahrenheit(temperatures.getFirst()));
+	System.out.printf("%.2f Degrees Fahrenheit",toFahrenheit(temperatures.getFirst()));
 	Double value=null;
-	while((value=temperatures.)!=null)
+	while((value=temperatures.getNext())!=null)
 	{
-		System.out.printf("%2f Degrees Fahrenheit",toFahrenheit(value));
+		System.out.printf("\n%.2f Degrees Fahrenheit",toFahrenheit(value));
 	}
+	
   }
 }
 	
