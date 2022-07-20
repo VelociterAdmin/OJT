@@ -1,9 +1,9 @@
-//package com.velociter.chapter2;
+package com.velociter.chapter2;
 
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		byte b =4;
 		short s=274;
 		int i=20;
