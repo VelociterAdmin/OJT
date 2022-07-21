@@ -43,7 +43,9 @@ public class LinkedList<T> {
 	// Get the next object in the list
 	public T getNext() {
 		if (current != null) {
+			
 			current = current.next;                  // Get the reference to the next item
+			
 		}
 		return current == null ? null : current.item;
 	}
@@ -69,4 +71,5 @@ public class LinkedList<T> {
 		ListItem next;                                // Refers to next item in the list
 		T item;                                       // The item for this ListItem
 	}
+	
 }

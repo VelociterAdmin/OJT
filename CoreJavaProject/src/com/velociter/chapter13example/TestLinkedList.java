@@ -1,6 +1,6 @@
 package com.velociter.chapter13example;
 
-public class Test {
+public class TestLinkedList {
 	public static void main(String[] args) {
 		//Pair<Double,Double> p=new Pair<Double,Double>(5.0, 6.0);
 		
@@ -12,6 +12,7 @@ public class Test {
 		list.getFirst();
 
 		Integer num=null;
+		System.out.println(list.getNext());
         System.out.println(list.getFirst());
 		while((num=list.getNext())!=null) {
 			System.out.println(num);

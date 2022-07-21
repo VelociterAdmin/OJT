@@ -8,6 +8,7 @@ public class TryAutoboxing  {
 	  	return 1.8*temperature+32;
 	}
 public static void main(String[] args) {
+	System.out.println("LinkedList");
 	
 	LinkedList<Double> temperatures =new LinkedList<Double>();
 	for(int i=0; i<6;i++)
@@ -20,6 +21,7 @@ public static void main(String[] args) {
 	{
 		System.out.printf("\n%.2f Degrees Fahrenheit",toFahrenheit(value));
 	}
+	
 	
   }
 }
