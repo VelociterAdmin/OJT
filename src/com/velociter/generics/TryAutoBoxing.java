@@ -9,8 +9,15 @@ public class TryAutoBoxing {
 		//Insert 6 Temperature value 0 to 25 Centigrade
 		for(int i = 0 ; i < 7 ; i++ ) {
 			temperatures.addItem(25.0*Math.random());
-		} 
-		System.out.println(temperatures);
+		}
+//		temperatures.addItem(12.0);
+//		temperatures.addItem(18.0);
+//		temperatures.addItem(22.0);
+		
+//		for(Double v : temperatures) {
+//			System.out.println(toFehrenheit(v));
+//		}
+		System.out.println();
 		System.out.printf("%.2f degrees Fahrenheit %n",toFehrenheit(temperatures.getFirst()));	
 		Double value = null;
 		while((value = temperatures.getNext()) != null)
@@ -18,6 +25,8 @@ public class TryAutoBoxing {
 			System.out.printf("%.2f degrees Fahrenheit %n",toFehrenheit(value));	
 			
 		}
+
+	
 	}
 	
 	
@@ -25,24 +34,3 @@ public class TryAutoBoxing {
 		return 1.8*temperature+32.0;
 	}
 }
-
-	
-	
-//public static void main(String[] args) {
-//LinkedList<Double> temperatures = new LinkedList<Double>();
-//// Insert 6 temperature values 0 to 25 degress Centigrade
-//for(int i = 0 ; i<6 ; i++) {
-//temperatures.addItem(25.0*Math.random());
-//}
-//System.out.printf("%.2f degrees Fahrenheit%n",
-//toFahrenheit(temperatures.getFirst()));
-//Double value = null;
-//while((value=temperatures.getNext()) != null) {
-//System.out.printf("%.2f degrees Fahrenheit%n", toFahrenheit(value));
-//}
-//}
-//// Convert Centigrade to Fahrenheit
-//public static double toFahrenheit(double temperature) {
-//return 1.8*temperature+32.0;
-//}
-//}
