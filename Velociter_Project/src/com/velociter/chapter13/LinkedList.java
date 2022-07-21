@@ -1,11 +1,49 @@
 package com.velociter.chapter13;
 
 import java.io.Serializable;
+import java.util.Iterator;
 
-public class LinkedList<T> {
+//public class LinkedList<T extends Serializable> implements Serializable  {
+public class LinkedList<T> implements Iterable<T>{
 	private ListItem start = null;               // First ListItem in the list
 	private ListItem end = null;              // Last ListItem in the list
-	private ListItem current = null;            // The current item for iterating
+	private ListItem current = null;      // The current item for iterating
+	
+	public Iterator<T> iterator() {
+		return new ListIterator();
+	}
+	
+	private class ListIterator implements Iterator<T>{
+		private T nextElement;
+		// Constructor
+		public ListIterator() {
+		nextElement = getFirst();
+		}
+		private T getFirst() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		// Method to test whether more elements are available
+		public boolean hasNext() {
+		return nextElement != null;
+		}
+		// Method to return the next available object from the linked list
+		public T next() {
+		T element = nextElement;
+		if(element == null) {
+		throw new java.util.NoSuchElementException();
+		}
+		nextElement = getNext();
+		return element;
+		}
+		
+		// Method to remove the last element retrieved from the linked list
+		// You don’t want to support this operation for the linked list
+		// so just throw the exception
+		public void remove() {
+		throw new IllegalStateException();
+		}
+	}
 	
 	// Default constructor - creates an empty list
 	public LinkedList() {}
@@ -48,10 +86,9 @@ public class LinkedList<T> {
 	return current == null ? null : current.item;
 	}
 	
+	private class ListItem implements Serializable {   //private class ListItem 
 	
-	private class ListItem {
-		ListItem next;            // Refers to next item in the list
-		T item;                        // The item for this ListItem
+                     
 	// Constructor
 	public ListItem(T item) {
 	this.item = item;            // Store the item
@@ -61,6 +98,12 @@ public class LinkedList<T> {
 	public String toString() {
 	return "ListItem "+ item ;
 	}
+	ListItem next;            // Refers to next item in the list
+	T item;                      // The item for this ListItem
 	
 	}
+
+
+	
+	
 	}

@@ -1,5 +1,6 @@
 package com.velociter.chapter13;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -13,12 +14,11 @@ public class TrySerializationLinkedList {
 		numbers.addItem(1+(int)(100.0*Math.random())); // Add ten random integers 1 to 100
 		}
 		System.out.println("numbers list contains:");
-		listAll(numbers); // List contents of numbers
+		listAll(numbers);              // List contents of numbers
 		// Now serialize the list to a file
-		String filename = "C:/Beg Java Stuff/Numbers.bin";
+		String filename = "F:\\new\\WriteFile.txt";
 		try {
-		ObjectOutputStream objOut = new ObjectOutputStream(
-		new FileOutputStream(filename));
+		ObjectOutputStream objOut = new ObjectOutputStream(new FileOutputStream(filename));
 		objOut.writeObject(numbers);
 		objOut.close();
 		} catch(IOException e) {
@@ -28,8 +28,7 @@ public class TrySerializationLinkedList {
 		LinkedList<Integer> values = null; // Variable to store list from the file
 		// Deserialize the list from the file
 		try {
-		ObjectInputStream objIn = new ObjectInputStream(
-		new FileInputStream(filename));
+		ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(filename));
 		values = (LinkedList<Integer>)(objIn.readObject());
 		objIn.close();
 		} catch(IOException e) {
@@ -54,5 +53,5 @@ public class TrySerializationLinkedList {
 		}
 		} while((number = list.getNext()) != null);
 		}
-		}
-	
+	}
+		
