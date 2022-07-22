@@ -14,12 +14,15 @@ public static void main(String[] args) {
 	{
 		temperatures.addItem(25*Math.random());
 	}
-	System.out.printf("%.2f Degrees Fahrenheit",toFahrenheit(temperatures.getFirst()));
-	Double value=null;
-	while((value=temperatures.getNext())!=null)
+	//System.out.printf("%.2f Degrees Fahrenheit",toFahrenheit(temperatures.getFirst()));
+	//Double value=null;
+	/*while((value=temperatures.getNext())!=null)
 	{
 		System.out.printf("\n%.2f Degrees Fahrenheit",toFahrenheit(value));
-	}
+	}*/
+	for(Double value : temperatures) {
+		System.out.printf("%.2f degrees Fahrenheit%n", toFahrenheit(value));
+		}
 	
 	
   }

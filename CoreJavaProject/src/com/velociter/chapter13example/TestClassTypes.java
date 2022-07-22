@@ -1,6 +1,7 @@
 package com.velociter.chapter13example;
 
 public class TestClassTypes {
+	//check whether the different class type shares same generic class
 	public static void main(String[] args) 
  {
   LinkedList<String> proverbs = new LinkedList<String>();
