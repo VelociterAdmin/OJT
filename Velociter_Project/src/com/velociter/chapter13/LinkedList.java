@@ -1,10 +1,10 @@
 package com.velociter.chapter13;
-
+// 1 Example of Chapter 13;
 import java.io.Serializable;
 import java.util.Iterator;
-
+// Using this code print the object in a file .
 //public class LinkedList<T extends Serializable> implements Serializable  {
-public class LinkedList<T> implements Iterable<T>{
+public class LinkedList<T>  implements Iterable<T>{
 	private ListItem start = null;               // First ListItem in the list
 	private ListItem end = null;              // Last ListItem in the list
 	private ListItem current = null;      // The current item for iterating
@@ -20,8 +20,8 @@ public class LinkedList<T> implements Iterable<T>{
 		nextElement = getFirst();
 		}
 		private T getFirst() {
-			// TODO Auto-generated method stub
-			return null;
+			current=start;
+			return start==null ?null : start.item ;
 		}
 		// Method to test whether more elements are available
 		public boolean hasNext() {
@@ -37,12 +37,6 @@ public class LinkedList<T> implements Iterable<T>{
 		return element;
 		}
 		
-		// Method to remove the last element retrieved from the linked list
-		// You don’t want to support this operation for the linked list
-		// so just throw the exception
-		public void remove() {
-		throw new IllegalStateException();
-		}
 	}
 	
 	// Default constructor - creates an empty list

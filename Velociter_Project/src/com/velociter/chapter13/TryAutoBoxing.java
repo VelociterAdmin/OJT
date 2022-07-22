@@ -20,12 +20,12 @@ public class TryAutoBoxing {
 		for(Double value : temp) {
 			System.out.println(toFahrenheit(value));
 		}
-		System.out.printf("%.2f degrees Fahrenheit %n", toFahrenheit(temp.getFirst()));
-		Double value = null;
-		while ((value = temp.getNext()) != null) 
-		{
-			System.out.printf("%.2f degrees Fahrenheit %n", toFahrenheit(value));
-
-		}
+//		System.out.printf("%.2f degrees Fahrenheit %n", toFahrenheit(temp.getFirst()));
+//		Double value = null;
+//		while ((value = temp.getNext()) != null) 
+//		{
+//			System.out.printf("%.2f degrees Fahrenheit %n", toFahrenheit(value));
+//
+//		}
 	}
 }
