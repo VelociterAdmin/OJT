@@ -3,6 +3,7 @@ package com.velociter.chapter13example;
 public class BinaryTree<T extends Comparable<? super T>> {
 	// Add a value to the tree
 	public void add(T value) {
+		
 		if (root == null) { // If there’s no root node
 			root = new Node(value); // store it in the root
 		} else { // Otherwise...
