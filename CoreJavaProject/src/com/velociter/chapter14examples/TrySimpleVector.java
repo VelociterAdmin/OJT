@@ -35,8 +35,9 @@ public class TrySimpleVector {
 		
 		names.addAll(strings);
 		System.out.println(names);
-		names.removeAll(names);
+		names.removeAll(strings);
 		System.out.println(names);
+		
 		
 	}
 }
