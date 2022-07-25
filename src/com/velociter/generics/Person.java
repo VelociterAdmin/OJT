@@ -1,5 +1,7 @@
 package com.velociter.generics;
 
+
+
 public class Person implements Comparable<Person>{
 
 	public Person(String name) {
@@ -12,7 +14,6 @@ public class Person implements Comparable<Person>{
 		}
 		return this.name.compareTo(person.name);
 	}
-	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

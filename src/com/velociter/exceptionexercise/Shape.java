@@ -1,4 +1,4 @@
-package com.velociter.chapter6.exercise;
+package com.velociter.exceptionexercise;
 /*
 Define an abstract base class Shape that includes protected data members for the (x, y) position of a shape, a public method to move a shape, and a public abstract method show()
 to output a shape. Derive subclasses for lines, circles, and rectangles. Also, define the class

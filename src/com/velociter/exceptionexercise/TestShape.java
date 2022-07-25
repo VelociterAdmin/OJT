@@ -1,5 +1,5 @@
 //package com.chapter6.exercise;
-package com.velociter.chapter6.exercise;
+package com.velociter.exceptionexercise;
 
 public class TestShape {
 	 public static void main(String args[]) {

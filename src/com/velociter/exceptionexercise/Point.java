@@ -1,4 +1,4 @@
-package com.velociter.chapter6.exercise;
+package com.velociter.exceptionexercise;
 
 public class Point {
 	protected double x = 0.0;

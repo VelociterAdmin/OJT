@@ -1,4 +1,4 @@
-package com.velociter.chapter6.exercise;
+package com.velociter.exceptionexercise;
 
 public class TestLoopTryBlock {
 
