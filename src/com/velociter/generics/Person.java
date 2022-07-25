@@ -6,7 +6,8 @@ public class Person implements Comparable<Person>{
 		this.name = name;		
 	}
 	public int compareTo(Person person) {
-		if(person ==  this) {
+		if(person ==  this) {	
+			System.out.println("this :"+this);
 			return 0;
 		}
 		return this.name.compareTo(person.name);
@@ -17,6 +18,5 @@ public class Person implements Comparable<Person>{
 		// TODO Auto-generated method stub
 		return name;
 	}
-	
 	protected String name;
 }

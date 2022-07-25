@@ -1,10 +1,12 @@
 package com.velociter.generics;
 
+import java.util.Iterator;
+
 public class TryFilexibleBinaryTree {
 
 	public static void main(String[] args) {
 		BinaryTree<Manager> people = new BinaryTree<Manager>();
-		Manager[] managers = { new Manager("Shafeeque",2),new Manager("Shweta",3),new Manager("Danish",1)};
+		Manager[] managers = {new Manager("Shafeeque",2),new Manager("Shweta",3),new Manager("Danish",1)};
 		
 		for(Manager manager : managers) {
 			people.add(manager);

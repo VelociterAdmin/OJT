@@ -5,6 +5,10 @@ public class TryBinaryTree {
 	public static void main(String[] args) {
 
 //		BinaryTree<?> people = new BinaryTree<Manager>();
+		BinaryTree<Integer> tree = new BinaryTree<Integer>();
+		BinaryTree<String> cache = new BinaryTree<String>();
+		
+//		BinaryTree<?> [] trees = {new BinaryTree<Integer>(), new BinaryTree<String>()};
 		
 		
 		int numbers[]  = new int[30];
@@ -23,7 +27,7 @@ public class TryBinaryTree {
 		}
 		
 		//create the tree and add the integer to it
-		BinaryTree<Integer> tree = new BinaryTree<Integer>();
+		
 		for(int number : numbers) {
 			tree.add(number);
 		}
@@ -46,7 +50,7 @@ public class TryBinaryTree {
 			System.out.printf("%-15s",word);
 		}
 		
-		BinaryTree<String> cache = new BinaryTree<String>();
+		
 		for(String word : words) {
 			cache.add(word);
 		}

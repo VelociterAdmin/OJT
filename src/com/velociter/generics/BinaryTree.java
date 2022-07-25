@@ -26,7 +26,7 @@ public class BinaryTree<T extends Comparable<? super T>>{
 			add(value,node.left);							//add it to left node
 		}
 	}else {													//It must be greater then the current node
-		if(node.right == null) {							//si it must be to the right
+		if(node.right == null) {							//so it must be to the right
 			node.right = new Node(value);	
 	}else {							
 		add(value,node.right);

@@ -7,7 +7,7 @@ public class TryWildCardArray {
 		BinaryTree<?> [] trees = {new BinaryTree<Integer>(), new BinaryTree<String>()};
 		LinkedList<?> [] lists = new LinkedList<?> [trees.length];
 		
-		int numbers[]  = new int[30];
+		int numbers[]  = new int[5];
 		for(int i = 0 ; i < numbers.length; i++) {
 			numbers[i] = (int) (1000*Math.random());	//Random number 0 - 999
 		}
@@ -26,9 +26,11 @@ public class TryWildCardArray {
 		for(int number : numbers) {
 		((BinaryTree<Integer>)trees[0]).add(number);		
 		}
+		
+		
 		// Create an array of words to be sorted
 		String[] words = {"vacillate", "procrastinate", "arboreal", "syzygy",
-		"xenocracy", "zygote", "mephitic", "soporific",
+		"xenocracy", "zygote", "mephitic", "soporific","soporific",
 		"grisly", "gristly" };
 		
 		//list the words
@@ -38,7 +40,35 @@ public class TryWildCardArray {
 			if(++count%5 == 0) {
 			System.out.println();
 			}
-			}
+		}
+		
+		//Insert the words into second tree
+		for(String word : words) {
+		((BinaryTree<String>) trees[1]).add(word);	
+		}
+		
+		//Sort the values in both trees
+		for(int i = 0; i<trees.length; i++) {
+			lists[i] = trees[i].sort();
+		}
+		
+		//list the sorted values from both the trees
+		for(LinkedList<?> list : lists) {
+			System.out.println("\nSorted results:");
+			listAll(list);
+		}
+		
+	}
+	
+	public static void listAll(LinkedList<?> list) {
+		int count = 0;
+		for(Object obj : list) {
+			System.out.println(obj+"   ");
+//			if(++count%6==0) {
+//				System.out.println();
+//			}
+		}
+
 	}
 
 }
