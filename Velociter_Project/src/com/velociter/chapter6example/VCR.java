@@ -41,7 +41,7 @@ public void mute() {
 	}
 	volume=MIN_VOLUME;
 	System.out.println(make + "VCR volume level:"+ volume);
-	return volume;
+	
 }
 
 @Override
